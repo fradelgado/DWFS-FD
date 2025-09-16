@@ -1,0 +1,127 @@
+/* Estilos para la página de contacto */
+.contact {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-section h2 {
+  color: #389cd1;
+  border-bottom: 2px solid #389cd1;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Formulario de contacto */
+.contact-form {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #389cd1;
+  box-shadow: 0 0 0 2px rgba(56, 156, 209, 0.2);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #d32f2f;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error-message {
+  display: block;
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.submit-button {
+  background: #389cd1;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #2a7ba8;
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Modo oscuro */
+.main-content.dark .contact-intro {
+  color: #ccc;
+}
+
+.main-content.dark .contact-form {
+  background: #2d2d2d;
+  border-color: #444;
+}
+
+.main-content.dark .form-group label {
+  color: #fff;
+}
+
+.main-content.dark .form-group input,
+.main-content.dark .form-group textarea {
+  background: #3a3a3a;
+  border-color: #555;
+  color: #fff;
+}
+
+.main-content.dark .form-group input:focus,
+.main-content.dark .form-group textarea:focus {
+  border-color: #389cd1;
+}
+
+.main-content.dark .form-group input::placeholder,
+.main-content.dark .form-group textarea::placeholder {
+  color: #aaa;
+}

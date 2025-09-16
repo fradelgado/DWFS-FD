@@ -1,0 +1,131 @@
+/* Estilos para la página de tiendas */
+.stores {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.stores-section h2 {
+  color: #389cd1;
+  border-bottom: 2px solid #389cd1;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.stores-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.loading-message {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  padding: 20px;
+}
+
+/* Grid de tiendas */
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Tarjetas de tiendas */
+.store-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.store-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.store-header {
+  margin-bottom: 20px;
+}
+
+.store-name {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #232946;
+}
+
+.store-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.store-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.store-detail strong {
+  color: #389cd1;
+  font-size: 0.9rem;
+}
+
+.store-detail span {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.service-tag {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Modo oscuro */
+.main-content.dark .stores-intro {
+  color: #ccc;
+}
+
+.main-content.dark .loading-message {
+  color: #aaa;
+}
+
+.main-content.dark .store-card {
+  background: #2d2d2d;
+  border-color: #444;
+  color: #fff;
+}
+
+.main-content.dark .store-card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.main-content.dark .store-name {
+  color: #fff;
+}
+
+.main-content.dark .store-detail span {
+  color: #ccc;
+}
+
+.main-content.dark .service-tag {
+  background: #263238;
+  color: #81c784;
+}
