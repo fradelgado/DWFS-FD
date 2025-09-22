@@ -1,0 +1,290 @@
+/* Estilos para la página de detalle de producto */
+.product-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.loading-container,
+.error-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loading-message {
+  font-style: italic;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error-container h2 {
+  color: #d32f2f;
+  margin-bottom: 15px;
+}
+
+.breadcrumb {
+  margin-bottom: 30px;
+}
+
+.back-link {
+  color: #389cd1;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #2a7ba8;
+}
+
+.fetch-error {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 4px solid #1976d2;
+}
+
+.product-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Sección de imágenes */
+.product-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  border-radius: 4px;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.thumbnail:hover {
+  border-color: #389cd1;
+}
+
+/* Sección de información */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.product-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #232946;
+  margin: 0;
+  flex: 1;
+}
+
+.product-category {
+  background: #389cd1;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.product-full-description {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.product-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #389cd1;
+}
+
+.product-stock {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.out-of-stock {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.product-actions {
+  margin: 10px 0;
+}
+
+.add-to-cart-btn {
+  background: #389cd1;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background: #2a7ba8;
+}
+
+.add-to-cart-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Especificaciones */
+.product-specifications h3 {
+  color: #389cd1;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.specs-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.spec-value {
+  color: #666;
+  flex: 1;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-detail-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .product-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .product-pricing {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .spec-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .spec-value {
+    text-align: left;
+  }
+}
+
+/* Modo oscuro */
+.main-content.dark .loading-message {
+  color: #aaa;
+}
+
+.main-content.dark .fetch-error {
+  background: #263238;
+  color: #81c784;
+  border-left-color: #81c784;
+}
+
+.main-content.dark .product-title {
+  color: #fff;
+}
+
+.main-content.dark .product-description,
+.main-content.dark .product-full-description {
+  color: #ccc;
+}
+
+.main-content.dark .product-pricing {
+  border-color: #444;
+}
+
+.main-content.dark .spec-item {
+  border-bottom-color: #444;
+}
+
+.main-content.dark .spec-label {
+  color: #fff;
+}
+
+.main-content.dark .spec-value {
+  color: #ccc;
+}
