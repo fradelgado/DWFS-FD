@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 0.8rem 2rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer strong {
+  color: var(--color-primary);
+}
+
+.footer__sub {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
