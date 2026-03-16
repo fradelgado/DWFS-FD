@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>UNIR hoy - Modo Oscuro con Bootstrap</title>
+    <title>UNIR hoy - Modo Oscuro con Bootstrap (window.onload)</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
+
+    <!--
+      ✅ El script está en el <head> usando window.onload.
+
+      window.onload se dispara cuando la página entera ha cargado:
+      el DOM, las imágenes, las hojas de estilo externas, los iframes...
+      todo. Es la forma más "completa" de esperar, pero también
+      la más tardía: si hay imágenes pesadas, el código tarda más en ejecutarse.
+
+      Diferencia clave con DOMContentLoaded:
+        - DOMContentLoaded → espera solo el HTML/DOM (más rápido)
+        - window.onload    → espera el HTML + todos los recursos (más lento)
+
+      Para manipular el DOM, DOMContentLoaded o defer suelen ser
+      preferibles. window.onload se usa cuando necesitas que los recursos
+      (imágenes, canvas, etc.) estén disponibles antes de ejecutar el código.
+    -->
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="banner">
       <h1>UNIR Hoy</h1>
+      <p class="badge-tecnica">Técnica: window.onload</p>
     </div>
     <div class="container py-4">
       <div class="row mb-3">
@@ -19,7 +38,8 @@
           </div>
         </div>
         <div class="col">
-          <label for="textSize"> Tamaño del texto</label><select id="textSize" class="form-control">
+          <label for="textSize"> Tamaño del texto</label>
+          <select id="textSize" class="form-control">
             <option value="text-small">Pequeño</option>
             <option value="text-medium" selected>Mediano</option>
             <option value="text-large">Grande</option>
@@ -41,9 +61,7 @@
     </div>
 
     <div class="footer">
-      <p>&copy; 2023 UNIR - Todos los derechos reservados</p>
+      <p>&copy; 2026 UNIR - Todos los derechos reservados</p>
     </div>
-
-    <script src="script.js"></script>
   </body>
 </html>
